@@ -1,7 +1,12 @@
 ﻿
 
-using AdventOfCode.Day01;
+using AdventOfCode;
+using System.Reflection;
 
-var fileIn = File.ReadAllText(@"C:\Users\GraySA17.GRAY\Documents\DEV\2024AdventOfCode\AdventOfCode\testinput.txt");
+string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"testinput.txt");
 
-Day01.ExecuteTwo(fileIn);
+var fileIn = File.ReadAllText(path);
+
+Day day = new Day02();
+
+day.ExecuteTwo(fileIn);
