@@ -7,6 +7,6 @@ string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly()
 
 var fileIn = File.ReadAllText(path);
 
-Day day = new Day04();
+Day day = new Day05();
 
 day.ExecuteTwo(fileIn);
